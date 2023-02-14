@@ -17,5 +17,5 @@
   * I would have added JS and Bootstrap with it to make it more user friendly and to have better user experience.
   * I would have added the logic on backend and would have added Database to store data as well and can retrieve them from an end point which will be called from front end JS, so each time we won't be needing to calculate for huge prime numbers and we can save lots of time.
 ## Ouput Results
-![Table Printing Output](Screenshot%20from%202023-02-14%2010-00-30.png)
-![Test Cases Output](Screenshot%20from%202023-02-14%2010-00-47.png)
+![Table Printing Output](Screenshot%20from%202023-02-14%2010-37-31.png)
+![Test Cases Output](Screenshot%20from%202023-02-14%2010-38-30.png)

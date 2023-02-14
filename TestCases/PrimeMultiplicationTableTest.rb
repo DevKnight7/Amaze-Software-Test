@@ -21,7 +21,7 @@ class PrimeMultiplicationTableTest < Test::Unit::TestCase
   end
 
   def test_primes_contain_non_prime_number
-    #negative test case
+    # negative test case
     assert_not_equal(Prime.first(4).push(rand(4)*2), PrimeMultiplicationTable.new(5).send(:primes))
   end
 
@@ -37,21 +37,21 @@ EOF
   def test_greater_than_1_primes
     # Test case 1: n = 5
     expected_output = <<-EOF
-|\t  |\t2 |\t3 |\t5 |\t7 |\t11 |
-|\t2 |\t4 |\t6 |\t10 |\t14 |\t22 |
-|\t3 |\t6 |\t9 |\t15 |\t21 |\t33 |
-|\t5 |\t10 |\t15 |\t25 |\t35 |\t55 |
-|\t7 |\t14 |\t21 |\t35 |\t49 |\t77 |
-|\t11 |\t22 |\t33 |\t55 |\t77 |\t121 |
+|       |     2 |     3 |     5 |     7 |    11 |
+|     2 |     4 |     6 |    10 |    14 |    22 |
+|     3 |     6 |     9 |    15 |    21 |    33 |
+|     5 |    10 |    15 |    25 |    35 |    55 |
+|     7 |    14 |    21 |    35 |    49 |    77 |
+|    11 |    22 |    33 |    55 |    77 |   121 |
 EOF
     output, err = capture_output { PrimeMultiplicationTable.new(5).execute }
-    puts output
     assert_equal(expected_output, output)
-
-    # Test case 2: n = 1
+  end
+  
+  def test_equal_to_1_primes
     expected_output = <<-EOF
-|\t  |\t2 |
-|\t2 |\t4 |
+|     |   2 |
+|   2 |   4 |
 EOF
     output, err = capture_output { PrimeMultiplicationTable.new(1).execute }
     assert_equal(expected_output, output)
