@@ -6,7 +6,7 @@ if __FILE__ == $PROGRAM_NAME
     if n=='NotInteger'
       puts "Invalid Input(Enter An Integer Number should be a greater than zero)"
     else
-      PrimeMultiplicationTable.new(n)
+      PrimeMultiplicationTable.new(n).execute
     end
     puts("Please Enter value of N or ^C to exit: ")
   end

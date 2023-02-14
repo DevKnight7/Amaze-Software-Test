@@ -5,6 +5,17 @@ class PrimeMultiplicationTable
     @number = number
   end
 
+  def execute
+    return puts 'Number should be greater than zero' if number < 1
+
+    header = primes.map { |x| x.to_s }.join(" |\t")
+    puts "|\t  |\t#{header} |"
+    primes.each do |prime|
+      row = primes.map { |x| (prime.to_i * x).to_s }.join(" |\t")
+      puts "|\t#{prime} |\t#{row} |"
+    end
+  end
+
   private
     def prime?(n)
       return false if n <= 1
